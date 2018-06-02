@@ -27,7 +27,7 @@
       </div>
     </div>
     <div class="row">
-      <div class = "col-6">
+      <div class = "col-md-8">
         <p class="lead mb-0">{{ form.email.label }}</p>
         {{ form.email(class = "form-control mb-2", placeholder = "Email") }}
         {% for error in form.email.errors %}
@@ -36,7 +36,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-6">
+      <div class="col-md-6">
         <p class="lead mb-0">{{ form.password.label }}</p>
         {{ form.password(class = "form-control mb-2", placeholder = "Password") }}
         {% for error in form.password.errors %}
@@ -45,7 +45,7 @@
       </div>
     </div>
     <div class = "row">
-      <div class = "col-6">
+      <div class = "col-md-6">
         <p class="lead mb-0">{{ form.password2.label }}</p>
         {{ form.password2(class = "form-control mb-2", placeholder = "Repeat Password")
                          }}

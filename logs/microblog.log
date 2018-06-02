@@ -91,3 +91,4 @@ jinja2.exceptions.UndefinedError: there is no parent block called 'scripts'.
 2018-05-31 11:41:56,961 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:50]
 2018-05-31 11:44:31,905 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:50]
 2018-05-31 20:48:31,198 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:50]
+2018-06-01 19:52:59,007 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:55]
