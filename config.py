@@ -15,3 +15,5 @@ class Config(object):
     ADMINS = ['blcodetester@gmail.com']
     #pagination
     POSTS_PER_PAGE = 10
+    #logs
+    LOG_TO_STDOUT = os.environ.get('LOG_TO_STDOUT')
