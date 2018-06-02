@@ -1,0 +1,123 @@
+2018-05-30 18:38:46,887 ERROR: Exception on /home [GET] [in /Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/brianli/Documents/Budget/app/routes.py", line 21, in home
+    expenses = current_user.posted_expenses().all()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 2783, in all
+    return list(self)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/sqlalchemy/orm/loading.py", line 98, in instances
+    util.raise_from_cause(err)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 187, in reraise
+    raise value
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/sqlalchemy/orm/loading.py", line 79, in instances
+    rows = [proc(row) for row in fetch]
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/sqlalchemy/orm/loading.py", line 79, in <listcomp>
+    rows = [proc(row) for row in fetch]
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/sqlalchemy/orm/loading.py", line 511, in _instance
+    loaded_instance, populate_existing, populators)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/sqlalchemy/orm/loading.py", line 611, in _populate_full
+    dict_[key] = getter(row)
+TypeError: must be real number, not str
+2018-05-30 18:43:39,469 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 18:43:44,288 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 18:43:52,007 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 18:44:21,574 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 18:47:36,331 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 18:47:46,101 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 18:47:51,413 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 18:47:55,381 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 18:48:54,616 ERROR: Exception on /home [GET] [in /Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/brianli/Documents/Budget/app/routes.py", line 22, in home
+    return render_template('home.html', form = form, expenses = expenses)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/brianli/Documents/Budget/app/templates/home.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/Users/brianli/Documents/Budget/app/templates/base.html", line 27, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/brianli/Documents/Budget/app/templates/home.html", line 27, in block "content"
+    type: {{expense.type}}  amount: ${{ str(expense.amount) }}
+jinja2.exceptions.UndefinedError: 'str' is undefined
+2018-05-30 18:49:26,699 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 18:50:41,499 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 18:53:37,512 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 19:11:36,274 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 19:11:47,272 ERROR: Exception on /home [GET] [in /Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/brianli/Documents/Budget/app/routes.py", line 27, in home
+    if expenses.has_prev else None
+UnboundLocalError: local variable 'expense' referenced before assignment
+2018-05-30 19:12:54,458 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 19:12:56,060 ERROR: Exception on /home [GET] [in /Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/brianli/Documents/Budget/app/routes.py", line 27, in home
+    if expenses.has_prev else None
+UnboundLocalError: local variable 'expense' referenced before assignment

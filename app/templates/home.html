@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title> Home | {{ super() }} </title>
+{% endblock %}
+
+{% block content %}
+  <h1 class="display-4 mt-4"> Expenses </h1>
+  <form class = "mt-4" action="" method="post">
+    {{ form.hidden_tag() }}
+    <div class = "row">
+      <div class="col-md-0.5">
+        <p class = 'lead ml-3 mt-1'> Form: </p>
+      </div>
+      <div class = "col-md-2">
+        {{ form.type(class = "form-control mb-2") }}
+      </div>
+      <div class = "col-md-3">
+        {{ form.amount(class = "form-control mb-2", placeholder = "$") }}
+        {% for error in form.amount.errors %}
+        <span style = "color:red;">[{{error}}]</span>
+        {% endfor %}
+      </div>
+      <div class = "col">
+        {{ form.submit(class = "btn btn-primary")}}
+      </div>
+    </div>
+  </form>
+  <p> {{date}} </p>
+  <p> {{day_start}} </p>
+  <p> {{day_end}} </p>
+  <div class = "row mx-auto justify-content-center">
+    <div style = "height:90px; display: flex; justify-content:center; align-items: center;"
+      class = "col-lg-4 mt-3 ml-4 mr-4 bg-light border rounded align-middle">
+      <p class="lead pt-3"> Monthly Expense:
+        {% if monthly_sum %}
+         ${{ monthly_sum }}
+        {% else %}
+          $0.00
+        {% endif %}
+       </p>
+    </div>
+    <div style = "height:90px; display: flex; justify-content:center; align-items: center;"
+      class= "col-lg-4 mt-3 mb-3 ml-4 mr-4 bg-light border rounded align-middle">
+      <p class="lead pt-3"> Daily Expense:
+        {% if daily_sum %}
+         ${{ daily_sum }}
+        {% else %}
+          $0.00
+        {% endif %}
+      </p>
+    </div>
+  </div>
+  <p class = 'lead mt-1 mb-1'> History: </p>
+  <table class = "table table-hover">
+    <thead class = "thead-light">
+      <tr>
+        <th scope="col"> # </th>
+        <th scope="col"> Payment Type </th>
+        <th scope="col"> Amount </th>
+        <th scope="col"> Date </th>
+        <th scope="col"> </th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for expense in expenses %}
+        <tr>
+          <td > {{ expense.id }} </td>
+          <td > {{ expense.type }} </td>
+          <td > ${{ expense.amount }} </td>
+          <td > {{ moment(expense.timestamp).format('L') }} </td>
+          <td >
+            <form action="{{ url_for('delete', id = expense.id) }}" method=post>
+              {{ form2.submit(class = "btn btn-danger btn-sm ml-2") }}
+            </form>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <nav aria-label="...">
+          <ul class="pagination justify-content-center">
+              <li class="page-item previous{% if not prev_url %} disabled{% endif %}">
+                  <a class="page-link" href="{{ prev_url or '#' }}">
+                      <span aria-hidden="true">&larr;</span> {{ 'Newer posts' }}
+                  </a>
+              </li>
+              <li class="page-item next{% if not next_url %} disabled{% endif %}">
+                  <a class="page-link" href="{{ next_url or '#' }}">
+                      {{ 'Older posts' }} <span aria-hidden="true">&rarr;</span>
+                  </a>
+              </li>
+          </ul>
+      </nav>
+
+{% endblock %}

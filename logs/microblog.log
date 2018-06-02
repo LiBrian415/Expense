@@ -1,0 +1,93 @@
+2018-05-30 19:13:03,583 ERROR: Exception on /home [GET] [in /Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/brianli/Documents/Budget/app/routes.py", line 27, in home
+    if expenses.has_prev else None
+UnboundLocalError: local variable 'expense' referenced before assignment
+2018-05-30 19:14:11,075 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 19:14:42,274 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 20:07:51,987 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:48]
+2018-05-30 20:08:31,879 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:48]
+2018-05-30 20:08:57,035 ERROR: Exception on /reset_password/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZXNldF9wYXNzd29yZCI6MSwiZXhwIjoxNTI3NzM2NzE2LjcyNzY4NTJ9.CzmAf2ma2z2ftbDyudezqNljaF27PCoELiNfV8fDamM [GET] [in /Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brianli/Documents/Budget/app/routes.py", line 112, in reset_password
+    form = ResetPAsswordForm()
+NameError: name 'ResetPAsswordForm' is not defined
+2018-05-30 20:09:15,469 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:48]
+2018-05-30 20:39:36,215 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:50]
+2018-05-30 20:39:38,914 ERROR: Exception on /home [GET] [in /Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/brianli/Documents/Budget/app/routes.py", line 31, in home
+    next_url = next_url, prev_url = prev_url)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/brianli/Documents/Budget/app/templates/home.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/Users/brianli/Documents/Budget/app/templates/base.html", line 31, in top-level template code
+    {% block scripts %}
+  File "/Users/brianli/Documents/Budget/app/templates/base.html", line 32, in block "scripts"
+    {{ super() }}
+jinja2.exceptions.UndefinedError: there is no parent block called 'scripts'.
+2018-05-30 20:41:44,740 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:50]
+2018-05-30 20:43:20,563 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:50]
+2018-05-30 20:43:45,919 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:50]
+2018-05-30 20:44:09,549 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:50]
+2018-05-30 20:55:51,939 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:50]
+2018-05-30 21:02:22,708 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:50]
+2018-05-30 21:06:02,052 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:50]
+2018-05-30 21:08:38,981 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:50]
+2018-05-30 21:09:18,281 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:50]
+2018-05-30 21:10:12,419 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:50]
+2018-05-30 21:12:15,754 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:50]
+2018-05-31 11:41:56,961 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:50]
+2018-05-31 11:44:31,905 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:50]
+2018-05-31 20:48:31,198 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:50]

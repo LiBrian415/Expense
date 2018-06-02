@@ -1,0 +1,119 @@
+2018-05-30 17:54:58,529 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 17:55:02,319 ERROR: Exception on /edit_profile [GET] [in /Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/brianli/Documents/Budget/app/routes.py", line 70, in edit_profile
+    form = EditProfileForm()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/wtforms/form.py", line 212, in __call__
+    return type.__call__(cls, *args, **kwargs)
+TypeError: __init__() missing 1 required positional argument: 'original_email'
+2018-05-30 17:58:46,957 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 17:58:52,578 ERROR: Exception on /edit_profile [POST] [in /Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/brianli/Documents/Budget/app/routes.py", line 71, in edit_profile
+    if form.validate_on_submit():
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask_wtf/form.py", line 101, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/wtforms/form.py", line 310, in validate
+    return super(Form, self).validate(extra)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/wtforms/form.py", line 152, in validate
+    if not field.validate(self, extra):
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/wtforms/fields/core.py", line 204, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/wtforms/fields/core.py", line 224, in _run_validation_chain
+    validator(form, self)
+  File "/Users/brianli/Documents/Budget/app/forms.py", line 38, in validate_email
+    user = User.query.filter_by(username = self.username.data).first()
+AttributeError: 'EditProfileForm' object has no attribute 'username'
+2018-05-30 17:59:23,736 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 18:00:07,466 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 18:20:58,844 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 18:21:03,736 ERROR: Exception on /home [GET] [in /Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/brianli/Documents/Budget/app/routes.py", line 23, in home
+    return render_template('home.html', expenses = expenses)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/brianli/Documents/Budget/app/templates/home.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/Users/brianli/Documents/Budget/app/templates/base.html", line 27, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/brianli/Documents/Budget/app/templates/home.html", line 10, in block "content"
+    {{ form.hidden_tag() }}
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2018-05-30 18:27:14,321 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 18:27:24,595 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 18:34:41,972 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
+2018-05-30 18:34:44,482 ERROR: Exception on /home [GET] [in /Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/brianli/Documents/Budget/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/brianli/Documents/Budget/app/routes.py", line 13, in home
+    form = PostForm()
+NameError: name 'PostForm' is not defined
+2018-05-30 18:35:16,330 INFO: Microblog startup [in /Users/brianli/Documents/Budget/app/__init__.py:46]
